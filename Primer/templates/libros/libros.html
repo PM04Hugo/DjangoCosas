@@ -9,8 +9,17 @@
 
         <h2>Libros</h2>
 
-            <p><strong>Nonbre:</strong> {{nombre}}</p>
+            <p><strong>Nombre:</strong> {{nombre}}</p>
             <p><strong>Autor:</strong> {{autor}}</p>
+            <p><strong>Fecha Adquisición: </strong> {{fecha | date:"d/m/Y "}}</p>
+
+            {% if valor >= 50 %}
+            <p>Oferta especial</p>
+            {%else%}
+            <p>No hay oferta chambul</p>
+            {% endif %}
+            <a href= "{% url 'detallelibro'%}">IR</a>
+
 
     </body>
 </html>
