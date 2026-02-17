@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Libros</title>
-    </head>
+{%extends "base.html"%%}
+{%block title%} Libros {%endblock%}
 
-    <body>
-
+{%block content%}
         <h2>Libros</h2>
 
             <p><strong>Nombre:</strong> {{nombre}}</p>
@@ -19,7 +14,4 @@
             <p>No hay oferta chambul</p>
             {% endif %}
             <a href= "{% url 'detallelibro'%}">IR</a>
-
-
-    </body>
-</html>
+{%endblock%}
